@@ -3,9 +3,10 @@
 
     int p1Hp = 100;
     int p2Hp = 100;
-
-    string p1Name = "Alex";
-    string p2Name = "Calin";
+    Console.WriteLine("Vad heter du?");
+    string p1Name = Console.ReadLine();
+    Console.WriteLine("Vad ska din enemy heta?");
+    string p2Name = Console.ReadLine();
 
     while (p1Hp > 0 && p2Hp > 0)
     {
@@ -28,4 +29,20 @@
         Console.WriteLine($"{p2Name} vann!");
     }
     Console.ReadLine();
+}
+
+bool spelaIgen = true;
+
+while (spelaIgen)
+{
+    Fight();
+
+    Console.WriteLine("Vill du spela igen? (ja/nej)");
+    string svar = Console.ReadLine();
+
+    if (svar == "nej")
+    {
+        spelaIgen = false;
+    }
+   
 }
