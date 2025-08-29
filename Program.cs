@@ -3,8 +3,12 @@
 
     int p1Hp = 100;
     int p2Hp = 100;
+    Console.WriteLine("Är du man eller kvinna?");
+    string gender = Console.ReadLine();
     Console.WriteLine("Vad heter du?");
     string p1Name = Console.ReadLine();
+    Console.WriteLine("Vilket kön ska din enemy vara man/kvinna?");
+    string gender2 = Console.ReadLine();
     Console.WriteLine("Vad ska din enemy heta?");
     string p2Name = Console.ReadLine();
 
@@ -18,7 +22,15 @@
     }
     if (p1Hp > 0)
     {
-        Console.WriteLine($"{p1Name} vann!");
+        if (gender == "man")
+        {
+
+            Console.WriteLine($"Mannen {p1Name} vann!");
+        }
+        else if (gender == "kvinna")
+        {
+            Console.WriteLine($"Kvinnan {p1Name} vann!");
+        }
     }
     else if (p1Hp <= 0 && p2Hp <= 0)
     {
@@ -26,7 +38,14 @@
     }
     else
     {
-        Console.WriteLine($"{p2Name} vann!");
+        if (gender2 == "man")
+        {
+            Console.WriteLine($"Mannen {p2Name} vann!");
+        }
+        else if (gender2 == "kvinna")
+        {
+             Console.WriteLine($"Kvinnan {p2Name} vann!");
+        }
     }
     Console.ReadLine();
 }
